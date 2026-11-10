@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Drag Matic Indo 201M</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app-container">
+    <header class="top-bar">
+      <div>
+        <h1 class="game-title">DRAG MATIC INDO 201M</h1>
+        <div id="bikeNameText" class="sub-info">Mio Sporty 115</div>
+      </div>
+      <div class="stats-box">
+        <div id="moneyText" class="money">Rp 2.500.000</div>
+        <div id="specText" class="specs">113cc • 9.0 HP</div>
+      </div>
+    </header>
+
+    <div class="canvas-wrapper">
+      <canvas id="gameCanvas" width="800" height="340"></canvas>
+      <div id="raceStatus" class="race-banner hidden">SIAP DI GARIS START</div>
+    </div>
+
+    <div id="raceControls" class="race-controls hidden">
+      <div class="hint-text">Tahan GAS di zona HIJAU saat lampu start menyala, lalu tahan penuh sampai finis!</div>
+      <div class="pedal-row">
+        <button id="btnBoost" class="btn-boost">⚡ POWER JET (1x)</button>
+        <button id="btnGas" class="btn-gas">🔥 TAHAN GAS</button>
+      </div>
+      <button id="btnBackGarage" class="btn-back hidden">⬅ Kembali ke Garasi</button>
+    </div>
+
+    <div id="garageSection">
+      <nav id="menuNav" class="tabs">
+        <button class="tab-btn active" onclick="switchTab('tracks', this)">🏁 Trek Kota</button>
+        <button class="tab-btn" onclick="switchTab('upgrade', this)">🔧 Bore Up & CVT</button>
+        <button class="tab-btn" onclick="switchTab('visual', this)">🎨 Modif Visual</button>
+        <button class="tab-btn" onclick="switchTab('dealer', this)">🛵 Dealer Matic</button>
+      </nav>
+      <div id="tabContent" class="tab-content"></div>
+    </div>
+  </div>
+
+  <script src="game.js"></script>
+</body>
+</html>
